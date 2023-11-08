@@ -1,0 +1,180 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+
+//Container Geral
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 60px;
+  max-width: 414px;
+  margin: 100px auto;
+}
+
+.styled-component {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+.ion-radio-wrapper-general {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 20px;
+  width: 100%;
+}
+//Container Geral
+
+//Header
+ion-toolbar {
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  gap: 16px;
+}
+//Header
+
+//Buttons Container
+.menu-buttons {
+  justify-content: space-between;
+  margin-top: 8px;
+  padding: 0 10px;
+}
+//Buttons Container
+
+//Botões Default
+.button-default {
+  --background: var(--sesi) !important;
+}
+
+.button-default::part(native) {
+  border-radius: 4px;
+}
+//Botões Default
+
+//Card
+ion-card ion-card-title {
+  color: var(--sesiescuro);
+}
+//Card
+
+//Calendário
+ion-datetime {
+  --ion-color-primary: var(--sesi);
+  --ion-color-contrast: var(--sesiescuro) !important;
+
+  border-radius: 8px;
+  background-color: var(--sesigray50);
+  color: #000;
+}
+
+ion-datetime.md::part(active) {
+  --ion-color-base: var(--sesilightbo) !important;
+  border: none !important;
+  outline: 0.9px solid var(--sesilight) !important;
+}
+
+ion-datetime.md::part(calendar-day):focus {
+  box-shadow: none !important;
+}
+
+ion-datetime.md::part(today) {
+  border: none;
+  color: var(--sesiescuro);
+}
+//Calendário
+
+//Seletores Radio
+ion-radio::part(mark) {
+  background: var(--sesi);
+}
+
+ion-radio::part(container) {
+  border-color: var(--sesigray100);
+}
+//Seletores Radio
+
+//Seletor Checkbox
+ion-checkbox {
+  --checkbox-background-checked: var(--sesi);
+}
+
+ion-checkbox::part(container) {
+  outline: 2px solid var(--sesigray100);
+  border: none;
+  padding: 2px;
+}
+//Seletor Checkbox
+
+//Text-area
+ion-textarea {
+  width: 100%;
+  border: 2px solid #c0c0c0;
+  border-radius: 4px;
+  padding-left: 4px;
+  background-color: #fff;
+}
+
+ion-textarea:focus {
+  border: 2px solid var(--sesi);
+}
+
+ion-textarea.has-focus.sc-ion-textarea-md-h
+  .textarea-highlight.sc-ion-textarea-md {
+  transform: scale(0) !important;
+  display: none !important;
+}
+
+ion-textarea.has-focus.textarea-highlight {
+  display: none !important;
+}
+
+ion-textarea.has-focus.sc-ion-textarea-md-h
+  .textarea-highlight.sc-ion-textarea-md {
+  transform: scale(0) !important;
+}
+
+ion-textarea.has-focus {
+  --highlight-color: var(--sesi);
+  border: 2px solid var(--sesi) !important;
+}
+//Text-area
+
+//Resposta curta
+ion-input {
+  border: 2px solid #c0c0c0;
+  border-radius: 4px;
+  padding-left: 4px !important;
+}
+
+ion-input.has-focus {
+  --highlight-color: var(--sesi);
+  border: 2px solid var(--sesi);
+}
+//Resposta curta
+
+//Container da questão
+.question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 12px;
+    border-bottom: 1px solid var(--sesigray100)
+}
+
+.question-container:nth-child(even) {
+    background-color: var(--sesigray300);
+}
+
+.question-container ion-label {
+    color: var(--sesi);
+    font-weight: 600;
+}
+//Container da questão

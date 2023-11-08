@@ -1,0 +1,7 @@
+{
+  "name": "ion-SESI-custom-components",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

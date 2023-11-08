@@ -1,0 +1,71 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <!-- Aqui entraria o nome do aluno -->
+    <ion-title> SESI Ionic Custom Components</ion-title>
+    <ion-buttons class="menu-buttons">
+      <ion-button [routerLink] = "['/']"><ion-icon name="home-outline" size="large"></ion-icon></ion-button>
+      <ion-button fill="solid" class="button-default" [routerLink]="['/formulario']">Formulários</ion-button>
+      <ion-button><ion-icon name="exit-outline" size="large"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <div class="styled-component">
+      <ion-title>Custom card</ion-title>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Form 1008</ion-card-subtitle>
+          <ion-card-title>Título do formulário mais extenso para teste</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel nisi
+          hendrerit, vulputate eros ac, hendrerit nisl. Proin vestibulum ligula
+          a nulla porta porta. Etiam egestas accumsan mi.
+          dolor mollis posuere.
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div class="styled-component">
+      <ion-title>Custom calendar</ion-title>
+      <ion-datetime presentation="date" size="cover" displayFormat="MM/DD/YYYY"></ion-datetime>
+    </div>
+    <div class="styled-component">
+      <ion-title>Custom radio</ion-title>
+      <ion-radio-group [allowEmptySelection]="true" value="turtles" class="ion-radio-wrapper-general">
+        <ion-radio value="dogs">Dogs</ion-radio><br />
+        <ion-radio value="cats">Cats</ion-radio><br />
+        <ion-radio value="turtles">Turtles</ion-radio><br />
+        <ion-radio value="fish">Fish</ion-radio><br />
+      </ion-radio-group>
+    </div>
+    <div class="styled-component">
+      <ion-title>Custom checkbox</ion-title>
+      <div class="ion-radio-wrapper-general">
+        <ion-checkbox>Desportivo</ion-checkbox>
+        <ion-checkbox>Desportivo</ion-checkbox>
+        <ion-checkbox>Desportivo</ion-checkbox>
+        <ion-checkbox>Desportivo</ion-checkbox>
+      </div>
+    </div>
+    <div class="styled-component">
+      <ion-title>Custom short text response</ion-title>
+      <div class="ion-radio-wrapper-general">
+        <ion-input placeholder="Digite sua resposta"></ion-input>
+      </div>
+    </div>
+    <div class="styled-component">
+      <ion-title>Custom long text response</ion-title>
+      <div class="ion-radio-wrapper-general">
+        <ion-textarea placeholder="Digite sua resposta" rows="2" autoGrow="true"></ion-textarea>
+      </div>
+    </div>
+  </div>
+</ion-content>

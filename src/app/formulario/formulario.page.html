@@ -1,0 +1,75 @@
+<ion-header [translucent]="false" collapse="fade">
+  <ion-toolbar>
+    <!-- Aqui entraria o nome do formulario -->
+    <ion-title>Formulário 1008</ion-title>
+    <ion-buttons class="menu-buttons">
+      <ion-button [routerLink]="['/']"
+        ><ion-icon name="home-outline" size="large"></ion-icon
+      ></ion-button>
+      <ion-button
+        fill="solid"
+        class="button-default"
+        [routerLink]="['/formulario']"
+        >Formulários</ion-button
+      >
+      <ion-button
+        ><ion-icon name="exit-outline" size="large"></ion-icon
+      ></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">formulario</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <div class="question-container">
+      <ion-label>De onde venho / Como fui...:</ion-label>
+      <ion-textarea
+        placeholder="Digite sua resposta"
+        [autoGrow]="true"
+        value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus sem, auctor accumsan egestas sed, venenatis at ex. Nam consequat ex odio, suscipit rhoncus orci dictum eget. Aenean sit amet ligula varius felis facilisis lacinia nec volutpat nulla. Duis ullamcorper sit amet turpis sed blandit. Integer pretium massa eu faucibus interdum."
+      >
+      </ion-textarea>
+    </div>
+    <div class="question-container">
+      <ion-label>Quem sou / Como sou...:</ion-label>
+      <ion-textarea
+        placeholder="Digite sua resposta"
+        [autoGrow]="true"
+        value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus sem, auctor accumsan egestas sed, venenatis at ex. Nam consequat ex odio, suscipit rhoncus orci dictum eget. Aenean sit amet ligula varius felis facilisis lacinia nec volutpat nulla. Duis ullamcorper sit amet turpis sed blandit. Integer pretium massa eu faucibus interdum."
+      >
+      </ion-textarea>
+    </div>
+    <div class="question-container">
+      <ion-label>Como serei / Amanhã me vejo...:</ion-label>
+      <ion-textarea
+        placeholder="Digite sua resposta"
+        [autoGrow]="true"
+        value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus sem, auctor accumsan egestas sed, venenatis at ex. Nam consequat ex odio, suscipit rhoncus orci dictum eget. Aenean sit amet ligula varius felis facilisis lacinia nec volutpat nulla. Duis ullamcorper sit amet turpis sed blandit. Integer pretium massa eu faucibus interdum."
+      >
+      </ion-textarea>
+    </div>
+    <div class="question-container">
+      <ion-label>Tenho dúvidas sobre...:</ion-label>
+      <ion-textarea
+        placeholder="Digite sua resposta"
+        [autoGrow]="true"
+        value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus sem, auctor accumsan egestas sed, venenatis at ex. Nam consequat ex odio, suscipit rhoncus orci dictum eget. Aenean sit amet ligula varius felis facilisis lacinia nec volutpat nulla. Duis ullamcorper sit amet turpis sed blandit. Integer pretium massa eu faucibus interdum."
+      >
+      </ion-textarea>
+    </div>
+    <div class="question-container">
+      <ion-label>Para mim, reconhecimento de saberes é...:</ion-label>
+      <ion-textarea
+        placeholder="Digite sua resposta"
+        [autoGrow]="true"
+        value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus sem, auctor accumsan egestas sed, venenatis at ex. Nam consequat ex odio, suscipit rhoncus orci dictum eget. Aenean sit amet ligula varius felis facilisis lacinia nec volutpat nulla. Duis ullamcorper sit amet turpis sed blandit. Integer pretium massa eu faucibus interdum."
+      >
+      </ion-textarea>
+    </div>
+  </ion-list>
+</ion-content>
