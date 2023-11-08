@@ -26,16 +26,30 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 0 20px;
   width: 100%;
 }
 //Container Geral
 
 //Header
+ion-header {
+    background-color: var(--sesi);
+  }
+
 ion-toolbar {
   --padding-top: 20px;
   --padding-bottom: 20px;
+  --background: var(--sesi);
   gap: 16px;
+  color: #fff;
+}
+
+ion-note {
+  padding: 0 20px;
+  color: #fff;
+}
+
+.menu-buttons .menu-icon {
+  color: #fff;
 }
 //Header
 
@@ -49,11 +63,35 @@ ion-toolbar {
 
 //Botões Default
 .button-default {
+  --background: #fff;
+  --color: var(--sesi);
+}
+
+.upload-button {
   --background: var(--sesi) !important;
 }
 
 .button-default::part(native) {
   border-radius: 4px;
+}
+
+.upload-button ion-icon {
+  margin-left: 8px;
+}
+
+.primary-button,
+.secondary-button {
+    width: 100%;
+    border: 8px;
+    --color: #fff;
+}
+
+.primary-button {
+    --background: var(--sesi); 
+}
+
+.secondary-button {
+    --background: var(--sesisec);
 }
 //Botões Default
 
@@ -71,6 +109,7 @@ ion-datetime {
   border-radius: 8px;
   background-color: var(--sesigray50);
   color: #000;
+  background-color: #fff;
 }
 
 ion-datetime.md::part(active) {
@@ -158,23 +197,47 @@ ion-input.has-focus {
 }
 //Resposta curta
 
+//Custom Label
+ion-label.question-label {
+  color: var(--sesi);
+  font-weight: 600;
+}
+//Custom Label
+
+//Toogle Custom
+ion-toggle.toggle-checked::part(track),
+ion-toggle.toggle-checked::part(handle) {
+  background: var(--sesi);
+}
+//Toogle Custom
+
+//Multiple-choice-question
+.multiple-choice-question {
+  width: 100%;
+}
+
+.multiple-choice-question ion-item ion-radio {
+  margin-right: 4px;
+}
+//Multiple-choice-question
+
 //Container da questão
 .question-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 8px;
-    padding: 12px;
-    border-bottom: 1px solid var(--sesigray100)
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--sesigray100);
 }
 
 .question-container:nth-child(even) {
-    background-color: var(--sesigray300);
+  background-color: var(--sesigray300);
 }
 
 .question-container ion-label {
-    color: var(--sesi);
-    font-weight: 600;
+  color: var(--sesiescuro);
+  font-weight: 600;
 }
 //Container da questão

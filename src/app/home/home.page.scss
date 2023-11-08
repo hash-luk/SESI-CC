@@ -8,9 +8,19 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 60px;
+  gap: 30px;
   max-width: 414px;
   margin: 100px auto;
+}
+
+#container ion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#container ion-list.item-separator-display {
+  padding: 0 20px;
 }
 
 .styled-component {
@@ -20,6 +30,8 @@
   justify-content: flex-start;
   gap: 16px;
   width: 100%;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--sesigray200);
 }
 
 .ion-radio-wrapper-general {
@@ -32,10 +44,16 @@
 //Container Geral
 
 //Header
+ion-header {
+  background-color: var(--sesi);
+}
+
 ion-toolbar {
   --padding-top: 20px;
   --padding-bottom: 20px;
+  --background: var(--sesi);
   gap: 16px;
+  color: #fff;
 }
 //Header
 
@@ -43,16 +61,46 @@ ion-toolbar {
 .menu-buttons {
   justify-content: space-between;
   margin-top: 8px;
+  padding: 0 10px;
+}
+
+.menu-buttons .menu-icon{
+  color: #fff;
 }
 //Buttons Container
 
 //Botões Default
 .button-default {
+  --background: #fff;
+  --color: var(--sesi);
+}
+
+.upload-button {
   --background: var(--sesi) !important;
 }
 
 .button-default::part(native) {
   border-radius: 4px;
+}
+
+.upload-button ion-icon {
+  margin-left: 8px;
+}
+
+.primary-button,
+.secondary-button {
+    width: 90%;
+    border: 8px;
+    --color: #fff;
+    margin: 0 auto;
+}
+
+.primary-button {
+    --background: var(--sesi); 
+}
+
+.secondary-button {
+    --background: var(--sesisec);
 }
 //Botões Default
 
@@ -71,6 +119,7 @@ ion-datetime {
   border-radius: 8px;
   background-color: var(--sesigray50);
   color: #000;
+  background-color: #fff;
 }
 
 ion-datetime.md::part(active) {
@@ -154,3 +203,48 @@ ion-input.has-focus {
   border: 2px solid var(--sesi)
 }
 //Resposta curta
+
+//Custom Label
+ion-label.question-label {
+  color: var(--sesi);
+  font-weight: 600;
+}
+//Custom Label
+
+//Toogle Custom
+ion-toggle.toggle-checked::part(track),
+ion-toggle.toggle-checked::part(handle) {
+  background: var(--sesi);
+}
+//Toogle Custom
+
+//Multiple-choice-question
+.multiple-choice-question {
+  width: 100%;
+}
+
+.multiple-choice-question ion-item ion-radio {
+  margin-right: 4px;
+}
+//Multiple-choice-question
+
+//Container da questão
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 12px;
+  border-bottom: 1px solid var(--sesigray100)
+}
+
+.question-container:nth-child(even) {
+  background-color: var(--sesigray300);
+}
+
+.question-container ion-label {
+  color: var(--sesiescuro);
+  font-weight: 600;
+}
+//Container da questão

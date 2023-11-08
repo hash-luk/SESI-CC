@@ -1,10 +1,11 @@
 <ion-header [translucent]="false" collapse="fade">
   <ion-toolbar>
     <!-- Aqui entraria o nome do formulario -->
-    <ion-title>Formulário 1008</ion-title>
+    <ion-title>Participação em atividades sociais</ion-title>
+    <ion-note color="medium">Formulário 1004</ion-note>
     <ion-buttons class="menu-buttons">
       <ion-button [routerLink]="['/']"
-        ><ion-icon name="home-outline" size="large"></ion-icon
+        ><ion-icon name="home-outline" size="large" class="menu-icon"></ion-icon
       ></ion-button>
       <ion-button
         fill="solid"
@@ -13,7 +14,7 @@
         >Formulários</ion-button
       >
       <ion-button
-        ><ion-icon name="exit-outline" size="large"></ion-icon
+        ><ion-icon name="exit-outline" size="large" class="menu-icon"></ion-icon
       ></ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -27,7 +28,7 @@
   </ion-header>
   <ion-list>
     <div class="question-container">
-      <ion-label>De onde venho / Como fui...:</ion-label>
+      <ion-label class="question-label">De onde venho / Como fui...:</ion-label>
       <ion-textarea
         placeholder="Digite sua resposta"
         [autoGrow]="true"
@@ -36,7 +37,35 @@
       </ion-textarea>
     </div>
     <div class="question-container">
-      <ion-label>Quem sou / Como sou...:</ion-label>
+      <ion-label class="question-label">Quem sou / Como sou...:</ion-label>
+      <ion-textarea
+        placeholder="Digite sua resposta"
+        [autoGrow]="true"
+        value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus sem, auctor accumsan egestas sed, venenatis at ex. Nam consequat ex odio, suscipit rhoncus orci dictum eget. Aenean sit amet ligula varius felis facilisis lacinia nec volutpat nulla. Duis ullamcorper sit amet turpis sed blandit. Integer pretium massa eu faucibus interdum."
+      >
+      </ion-textarea>
+      <ion-label class="question-label">Fotos do passado (arquivo JPG ou PNG) - Tamanho Máximo das Fotos 5 Megas:</ion-label>
+      <div class="ion-radio-wrapper-general">
+        <input type="file" id="file-upload" onChange={setImage} style="display: none;"/>
+        <ion-button class="upload-button">
+          <span>Enviar arquivo</span>
+          <ion-icon name="cloud-upload-outline" size="medium"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+    <div class="question-container">
+      <ion-label class="question-label"
+        >Como serei / Amanhã me vejo...:</ion-label
+      >
+      <ion-textarea
+        placeholder="Digite sua resposta"
+        [autoGrow]="true"
+        value=""
+      >
+      </ion-textarea>
+    </div>
+    <div class="question-container">
+      <ion-label class="question-label">Tenho dúvidas sobre...:</ion-label>
       <ion-textarea
         placeholder="Digite sua resposta"
         [autoGrow]="true"
@@ -45,31 +74,37 @@
       </ion-textarea>
     </div>
     <div class="question-container">
-      <ion-label>Como serei / Amanhã me vejo...:</ion-label>
+      <ion-label class="question-label"
+        >Participo de modo responsável e cívico, na vida da comunidade (colaboro com a autarquia, escola, paróquia, escoteiros, movimentos sociais, associações, etc.)</ion-label
+      >
       <ion-textarea
         placeholder="Digite sua resposta"
         [autoGrow]="true"
-        value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus sem, auctor accumsan egestas sed, venenatis at ex. Nam consequat ex odio, suscipit rhoncus orci dictum eget. Aenean sit amet ligula varius felis facilisis lacinia nec volutpat nulla. Duis ullamcorper sit amet turpis sed blandit. Integer pretium massa eu faucibus interdum."
+        value=""
       >
       </ion-textarea>
     </div>
     <div class="question-container">
-      <ion-label>Tenho dúvidas sobre...:</ion-label>
-      <ion-textarea
-        placeholder="Digite sua resposta"
-        [autoGrow]="true"
-        value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus sem, auctor accumsan egestas sed, venenatis at ex. Nam consequat ex odio, suscipit rhoncus orci dictum eget. Aenean sit amet ligula varius felis facilisis lacinia nec volutpat nulla. Duis ullamcorper sit amet turpis sed blandit. Integer pretium massa eu faucibus interdum."
+      <ion-label class="question-label"
+        >Trabalho em equipe cooperativamente:</ion-label
       >
-      </ion-textarea>
+      <div class="ion-radio-wrapper-general">
+        <ion-checkbox>Desportivo</ion-checkbox>
+        <ion-checkbox>Cultural</ion-checkbox>
+        <ion-checkbox>Religioso</ion-checkbox>
+        <ion-checkbox>Filantropico</ion-checkbox>
+      </div>
     </div>
     <div class="question-container">
-      <ion-label>Para mim, reconhecimento de saberes é...:</ion-label>
-      <ion-textarea
-        placeholder="Digite sua resposta"
-        [autoGrow]="true"
-        value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus sem, auctor accumsan egestas sed, venenatis at ex. Nam consequat ex odio, suscipit rhoncus orci dictum eget. Aenean sit amet ligula varius felis facilisis lacinia nec volutpat nulla. Duis ullamcorper sit amet turpis sed blandit. Integer pretium massa eu faucibus interdum."
-      >
-      </ion-textarea>
+      <ion-toggle [enableOnOffLabels]="true"><ion-label>Tem experiência profissional?</ion-label></ion-toggle>
+    </div>
+    <div class="question-container">
+      <ion-label>Data do preenchimento</ion-label>
+      <ion-datetime presentation="date" size="cover" displayFormat="MM/DD/YYYY"></ion-datetime>
+    </div>
+    <div class="question-container submit-container">
+      <ion-button class="secondary-button">Salvar Parcial</ion-button>
+      <ion-button class="primary-button">Finalizar</ion-button>
     </div>
   </ion-list>
 </ion-content>
