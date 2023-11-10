@@ -17,4 +17,8 @@ export class ListFormsPage implements OnInit {
   ngOnInit() {
   }
 
+  redirectTo(page: string):void {
+    window.location.href = `${page}`
+  }
+
 }

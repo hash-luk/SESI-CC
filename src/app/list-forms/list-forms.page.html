@@ -21,7 +21,7 @@
 <ion-content [fullscreen]="true">
   <ion-list>
     <div class="item-container" *ngFor="let form of forms; let i = index">
-      <ion-card>
+      <ion-card (click)="redirectTo('competencias')">
         <ion-card-header>
           <ion-card-subtitle>Form 100{{i+1}}</ion-card-subtitle>
           <ion-card-title>História da Minha Vida</ion-card-title>
