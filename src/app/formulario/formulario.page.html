@@ -101,35 +101,54 @@
       </div>
     </div>
     <div class="question-container">
-      <ion-label>Tem experiência profissional?</ion-label>
-      <ion-radio-group
-        class="question-container-list-options"
-        value="custom-options"
-        (ionChange)="showOthersInput($event)"
-      >
-        <ion-radio name="option" value="0"
-          ><ion-label>Não</ion-label></ion-radio
-        >
-        <ion-radio name="option" value="1"
-          ><ion-label>Sim</ion-label></ion-radio
-        >
-        <ion-radio name="option" value="2"
-          ><ion-label>Outro</ion-label></ion-radio
-        >
-      </ion-radio-group>
+      <ion-toggle [enableOnOffLabels]="true" (ionChange)="showOthersInput($event)"><ion-label>Tem experiência profissional?</ion-label></ion-toggle>
       <ion-input
         placeholder="Digite sua resposta"
         style="display: none"
         class="other-options-input"
       ></ion-input>
-    </div>
-    <div class="question-container">
-      <ion-label>Data do preenchimento</ion-label>
-      <ion-datetime
-        presentation="date"
-        size="cover"
-        displayFormat="MM/DD/YYYY"
-      ></ion-datetime>
+      <div class="group-questions experience-container-1" style="display: none;">
+        <ion-label class="section-title">
+          Experiência 1
+        </ion-label>
+        <ion-label>Data de entrada</ion-label>
+        <ion-datetime
+          presentation="date"
+          size="cover"
+          displayFormat="MM/DD/YYYY"
+        ></ion-datetime>
+        <ion-label>Data de saída</ion-label>
+        <ion-datetime
+          presentation="date"
+          size="cover"
+          displayFormat="MM/DD/YYYY"
+        ></ion-datetime>
+        <ion-label>
+          Profissão
+        </ion-label>
+        <ion-input placeholder="Digite sua resposta"></ion-input>
+        <ion-label>
+          Empresa
+        </ion-label>
+        <ion-input placeholder="Digite sua resposta"></ion-input>
+        <ion-label>
+          Atividades realizadas
+        </ion-label>
+        <ion-textarea placeholder="Digite sua resposta"></ion-textarea>
+        <ion-label>
+          Motivos de Satisfação (Recordações positivas)
+        </ion-label>
+        <ion-textarea placeholder="Digite sua resposta"></ion-textarea>
+        <ion-label>
+          Motivos de insatisfação (Recordações negativas)
+        </ion-label>
+        <ion-textarea placeholder="Digite sua resposta"></ion-textarea>
+        <ion-label>
+          O que aprendi e conservo até hoje
+        </ion-label>
+        <ion-textarea placeholder="Digite sua resposta"></ion-textarea>
+        <ion-button class="primary-button">Adicionar experiência <ion-icon name="add-outline"></ion-icon></ion-button>
+      </div>  
     </div>
     <div class="question-container submit-container">
       <ion-button class="secondary-button">Salvar Parcial</ion-button>

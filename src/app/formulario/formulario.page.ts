@@ -12,12 +12,12 @@ export class FormularioPage implements OnInit {
   ngOnInit() {}
 
   showOthersInput(event: any): void {
-    const otherOptionsInput = document.querySelector(".other-options-input");
+    const experienceContainer01 = document.querySelector(".experience-container-1");
 
-    if(event.detail.value == 2) {
-      otherOptionsInput?.setAttribute("style", "display: block;")
+    if(event.detail.checked) {
+      experienceContainer01?.setAttribute("style", "display: flex;")
     } else {
-      otherOptionsInput?.setAttribute("style", "display: none;")
+      experienceContainer01?.setAttribute("style", "display: none;")
     }
   }
 }
