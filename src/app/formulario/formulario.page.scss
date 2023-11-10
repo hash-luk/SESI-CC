@@ -229,4 +229,13 @@ ion-toggle.toggle-checked::part(handle) {
   color: var(--sesiescuro);
   font-weight: 600;
 }
+
+.question-container-list-options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 80%;
+  padding: none;
+}
 //Container da questão

@@ -96,7 +96,13 @@
       </div>
     </div>
     <div class="question-container">
-      <ion-toggle [enableOnOffLabels]="true"><ion-label>Tem experiência profissional?</ion-label></ion-toggle>
+      <ion-label>Tem experiência profissional?</ion-label>
+      <ion-list class="question-container-list-options">
+        <ion-checkbox  name="option"><ion-label>Sim</ion-label></ion-checkbox>
+        <ion-checkbox  name="option"><ion-label>Não</ion-label></ion-checkbox>
+        <ion-checkbox (ionChange)="showOthersInput($event)" name="option"><ion-label>Outro</ion-label></ion-checkbox>
+      </ion-list>
+      <ion-input placeholder="Digite sua resposta" style="display: none;" class="other-options-input"></ion-input>
     </div>
     <div class="question-container">
       <ion-label>Data do preenchimento</ion-label>
