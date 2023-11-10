@@ -113,28 +113,16 @@ ion-card ion-card-title {
 
 //Calendário
 ion-datetime {
-  --ion-color-primary: var(--sesi);
-  --ion-color-contrast: var(--sesiescuro) !important;
-
-  border-radius: 8px;
-  background-color: var(--sesigray50);
-  color: #000;
-  background-color: #fff;
+  --ion-color-base: var(--sesi) !important;
 }
 
 ion-datetime.md::part(active) {
-  --ion-color-base: var(--sesilightbo) !important;
-  border: none !important;
-  outline: 0.9px solid var(--sesilight) !important;
+  background-color: transparent;
+  color: var(--sesiescuro);
 }
 
 ion-datetime.md::part(calendar-day):focus {
   box-shadow: none !important;
-}
-
-ion-datetime.md::part(today) {
-  border: none;
-  color: var(--sesiescuro);
 }
 //Calendário
 
