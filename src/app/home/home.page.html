@@ -4,18 +4,12 @@
     <ion-title> SESI Ionic Custom Components</ion-title>
     <ion-buttons class="menu-buttons">
       <ion-button [routerLink] = "['/']"><ion-icon name="home-outline" size="large" class="menu-icon"></ion-icon></ion-button>
-      <ion-button fill="solid" class="button-default" [routerLink]="['/formulario']">Formulários</ion-button>
+      <ion-button fill="solid" class="button-default" expand="block" id="open-modal">Seções</ion-button>
       <ion-button><ion-icon name="exit-outline" size="large" class="menu-icon"></ion-icon></ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
     <div class="styled-component">
       <ion-title>Custom card</ion-title>
@@ -111,4 +105,23 @@
       <ion-button class="secondary-button">Finalizar</ion-button>
     </div>
   </div>
+  <ion-modal trigger="open-modal">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="end">
+            <ion-button (click)="cancel()">Voltar</ion-button>
+          </ion-buttons>
+          <ion-title>Selecione uma seção</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-list class="styled-component">
+          <ion-button class="primary-button" (click)="redirectTo('competencias')">Exemplo Competências</ion-button>
+          <ion-button class="secondary-button" (click)="redirectTo('formulario')">Exemplo de formulário</ion-button>
+          <ion-button class="secondary-button additional-button" (click)="redirectTo('list-forms')">Exemplo Indíce de formulários</ion-button>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>

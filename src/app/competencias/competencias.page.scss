@@ -1,0 +1,54 @@
+@import "../formulario/formulario.page.scss";
+
+//Container de competencias
+div.item-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+}
+
+div.item-container:not(:last-child) {
+    border-bottom: 1px solid var(--sesigray100);
+}
+//Container de competencias
+
+//Botões de competencia
+
+.competence-button {
+    width: 100%;
+}
+
+.competence-button span {
+    font-size: 18px;
+    margin-right: 16px;
+}
+
+.competence-button::part(native) {
+    padding: 12px;
+    font-size: 16px;
+}
+
+.ct-1 {
+    --background: var(--area1);
+}
+
+.ct-2 {
+    --background: var(--area2);
+}
+
+.ct-3 {
+    --background: var(--area3);
+}
+
+.ct-4 {
+    --background: var(--area4);
+}
+
+.ct-5 {
+    --background: var(--area5);
+}
+//Botões de competencia
+
+

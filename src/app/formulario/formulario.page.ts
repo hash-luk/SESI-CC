@@ -11,7 +11,7 @@ export class FormularioPage implements OnInit {
 
   ngOnInit() {}
 
-  public showOthersInput(event: any): void {
+  showOthersInput(event: any): void {
     const otherOptionsInput = document.querySelector(".other-options-input");
 
     if(event.detail.value == 2) {

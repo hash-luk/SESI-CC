@@ -1,0 +1,38 @@
+<ion-header [translucent]="false" collapse="fade">
+  <ion-toolbar>
+    <ion-title>Formulários disponíveis</ion-title>
+    <ion-buttons class="menu-buttons">
+      <ion-button [routerLink]="['/']"
+        ><ion-icon name="home-outline" size="large" class="menu-icon"></ion-icon
+      ></ion-button>
+      <ion-button
+        fill="solid"
+        class="button-default"
+        [routerLink]="['/formulario']"
+        >Formulários</ion-button
+      >
+      <ion-button
+        ><ion-icon name="exit-outline" size="large" class="menu-icon"></ion-icon
+      ></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <div class="item-container" *ngFor="let form of forms; let i = index">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Form 100{{i+1}}</ion-card-subtitle>
+          <ion-card-title>História da Minha Vida</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel nisi
+          hendrerit, vulputate eros ac, hendrerit nisl. Proin vestibulum ligula
+          a nulla porta porta. Etiam egestas accumsan mi.
+          dolor mollis posuere.
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-list>
+</ion-content>

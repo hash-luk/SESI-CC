@@ -1,0 +1,10 @@
+@import "../home/home.page.scss";
+@import "../competencias/competencias.page.scss";
+
+div.item-container {
+    border-bottom: none !important;
+}
+
+div.item-container:nth-child(even) ion-card {
+    background-color: var(--sesigray300);
+}
