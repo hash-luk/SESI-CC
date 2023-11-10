@@ -1,8 +1,11 @@
 @import "../home/home.page.scss";
-@import "../competencias/competencias.page.scss";
 
 div.item-container {
-    border-bottom: none !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
 }
 
 div.item-container:nth-child(even) ion-card {
