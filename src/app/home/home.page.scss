@@ -117,6 +117,7 @@ ion-datetime {
 }
 
 ion-datetime.md::part(active) {
+  --ion-color-base: var(--area5) !important; 
   background-color: transparent;
   color: var(--sesiescuro);
 }
