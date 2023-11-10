@@ -44,9 +44,17 @@
         value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus sem, auctor accumsan egestas sed, venenatis at ex. Nam consequat ex odio, suscipit rhoncus orci dictum eget. Aenean sit amet ligula varius felis facilisis lacinia nec volutpat nulla. Duis ullamcorper sit amet turpis sed blandit. Integer pretium massa eu faucibus interdum."
       >
       </ion-textarea>
-      <ion-label class="question-label">Fotos do passado (arquivo JPG ou PNG) - Tamanho Máximo das Fotos 5 Megas:</ion-label>
+      <ion-label class="question-label"
+        >Fotos do passado (arquivo JPG ou PNG) - Tamanho Máximo das Fotos 5
+        Megas:</ion-label
+      >
       <div class="ion-radio-wrapper-general">
-        <input type="file" id="file-upload" onChange={setImage} style="display: none;"/>
+        <input
+          type="file"
+          id="file-upload"
+          onChange="{setImage}"
+          style="display: none"
+        />
         <ion-button class="upload-button">
           <span>Enviar arquivo</span>
           <ion-icon name="cloud-upload-outline" size="medium"></ion-icon>
@@ -75,7 +83,9 @@
     </div>
     <div class="question-container">
       <ion-label class="question-label"
-        >Participo de modo responsável e cívico, na vida da comunidade (colaboro com a autarquia, escola, paróquia, escoteiros, movimentos sociais, associações, etc.)</ion-label
+        >Participo de modo responsável e cívico, na vida da comunidade (colaboro
+        com a autarquia, escola, paróquia, escoteiros, movimentos sociais,
+        associações, etc.)</ion-label
       >
       <ion-textarea
         placeholder="Digite sua resposta"
@@ -97,16 +107,34 @@
     </div>
     <div class="question-container">
       <ion-label>Tem experiência profissional?</ion-label>
-      <ion-list class="question-container-list-options">
-        <ion-checkbox  name="option"><ion-label>Sim</ion-label></ion-checkbox>
-        <ion-checkbox  name="option"><ion-label>Não</ion-label></ion-checkbox>
-        <ion-checkbox (ionChange)="showOthersInput($event)" name="option"><ion-label>Outro</ion-label></ion-checkbox>
-      </ion-list>
-      <ion-input placeholder="Digite sua resposta" style="display: none;" class="other-options-input"></ion-input>
+      <ion-radio-group
+        class="question-container-list-options"
+        value="custom-options"
+        (ionChange)="showOthersInput($event)"
+      >
+        <ion-radio name="option" value="0"
+          ><ion-label>Não</ion-label></ion-radio
+        >
+        <ion-radio name="option" value="1"
+          ><ion-label>Sim</ion-label></ion-radio
+        >
+        <ion-radio name="option" value="2"
+          ><ion-label>Outro</ion-label></ion-radio
+        >
+      </ion-radio-group>
+      <ion-input
+        placeholder="Digite sua resposta"
+        style="display: none"
+        class="other-options-input"
+      ></ion-input>
     </div>
     <div class="question-container">
       <ion-label>Data do preenchimento</ion-label>
-      <ion-datetime presentation="date" size="cover" displayFormat="MM/DD/YYYY"></ion-datetime>
+      <ion-datetime
+        presentation="date"
+        size="cover"
+        displayFormat="MM/DD/YYYY"
+      ></ion-datetime>
     </div>
     <div class="question-container submit-container">
       <ion-button class="secondary-button">Salvar Parcial</ion-button>

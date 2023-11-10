@@ -13,9 +13,8 @@ export class FormularioPage implements OnInit {
 
   public showOthersInput(event: any): void {
     const otherOptionsInput = document.querySelector(".other-options-input");
-    console.log(event)
 
-    if(event.detail.checked) {
+    if(event.detail.value == 2) {
       otherOptionsInput?.setAttribute("style", "display: block;")
     } else {
       otherOptionsInput?.setAttribute("style", "display: none;")
