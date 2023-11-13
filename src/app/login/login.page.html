@@ -15,8 +15,10 @@
       <div class="input-wrapper">
         <ion-input label="Usuário" label-placement="floating" fill="solid" placeholder="Digite seu email" required></ion-input>
         <ion-input label="Senha" label-placement="floating" fill="solid" placeholder="Digite sua senha" required><ion-icon name="eye-outline"></ion-icon></ion-input>
+      </div>
+      <div class="control-buttons">
+        <ion-button type="submit" (click)="redirectTo('/')">Acessar</ion-button>
         <ion-nav-link>Esqueci minha senha</ion-nav-link>
       </div>
-      <ion-button type="submit" (click)="redirectTo('/')">Acessar</ion-button>
     </form>
 </ion-content>
