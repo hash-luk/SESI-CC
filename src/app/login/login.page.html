@@ -1,0 +1,22 @@
+<!-- <ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-title> SESI Ionic Custom Components</ion-title>
+    <ion-buttons class="menu-buttons">
+      <ion-button [routerLink] = "['/']"><ion-icon name="home-outline" size="large" class="menu-icon"></ion-icon></ion-button>
+      <ion-button fill="solid" class="button-default" expand="block" id="open-modal">Seções</ion-button>
+      <ion-button><ion-icon name="exit-outline" size="large" class="menu-icon"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true" style="background-color: var(--sesi);">
+    <ion-img src="../../assets/images/logo.svg" alt="Logo imagem SESI"/>
+    <form class="form-content">
+      <div class="input-wrapper">
+        <ion-input label="Usuário" label-placement="floating" fill="solid" placeholder="Digite seu email" required></ion-input>
+        <ion-input label="Senha" label-placement="floating" fill="solid" placeholder="Digite sua senha" required><ion-icon name="eye-outline"></ion-icon></ion-input>
+        <ion-nav-link>Esqueci minha senha</ion-nav-link>
+      </div>
+      <ion-button type="submit" (click)="redirectTo('/')">Acessar</ion-button>
+    </form>
+</ion-content>

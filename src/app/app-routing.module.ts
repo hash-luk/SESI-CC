@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'list-forms',
     loadChildren: () => import('./list-forms/list-forms.module').then( m => m.ListFormsPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({
