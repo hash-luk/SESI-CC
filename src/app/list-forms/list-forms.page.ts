@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListFormsPage implements OnInit {
   forms: number[] = [];
+  formsTitle: string[] = [];
 
   constructor() { 
     for(let i = 1; i <= 8; i++) {

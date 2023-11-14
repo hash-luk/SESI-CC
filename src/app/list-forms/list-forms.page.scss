@@ -8,6 +8,57 @@ div.item-container {
     padding: 8px 16px;
 }
 
-div.item-container:nth-child(even) ion-card {
-    background-color: var(--sesigray300);
+ion-card {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+    width: 100%;
 }
+
+ion-button.access-form {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+ion-button.access-form ion-icon {
+    font-size: 20px;
+}
+
+ion-button[disabled] {
+    --background: var(--sesigray) !important;
+    --ion-color-base: var(--sesigray) !important;
+    color: #000;
+    font-weight: 600 !important;
+}
+
+ion-button.status-1 {
+    --background: var(--sesi) !important;
+}
+
+ion-button.status-3 {
+    --background: var(--sesisecmedio) !important;
+}
+
+ion-button.status-4 {
+    --background: var(--sesifbi) !important;
+}
+
+ion-button.status-6 {
+    --background: var(--sesifbw) !important;
+    color: #000;
+}
+
+ion-button.status-7 {
+    --background: var(--sesisecdark) !important;
+}
+
+ion-button.status-8 {
+    --background: var(--sesisec) !important;
+}
+
+

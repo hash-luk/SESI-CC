@@ -112,17 +112,9 @@
           Experiência 1
         </ion-label>
         <ion-label>Data de entrada</ion-label>
-        <ion-datetime
-          presentation="date"
-          size="cover"
-          displayFormat="MM/DD/YYYY"
-        ></ion-datetime>
+        <ion-datetime-button datetime="start-datetime"></ion-datetime-button>
         <ion-label>Data de saída</ion-label>
-        <ion-datetime
-          presentation="date"
-          size="cover"
-          displayFormat="MM/DD/YYYY"
-        ></ion-datetime>
+        <ion-datetime-button datetime="end-datetime"></ion-datetime-button>
         <ion-label>
           Profissão
         </ion-label>
@@ -155,4 +147,14 @@
       <ion-button class="primary-button">Finalizar</ion-button>
     </div>
   </ion-list>
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime id="start-datetime" presentation="date"></ion-datetime>
+    </ng-template>
+  </ion-modal>
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime id="end-datetime" presentation="date"></ion-datetime>
+    </ng-template>
+  </ion-modal>
 </ion-content>

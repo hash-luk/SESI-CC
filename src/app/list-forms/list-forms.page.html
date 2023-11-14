@@ -21,17 +21,12 @@
 <ion-content [fullscreen]="true">
   <ion-list>
     <div class="item-container" *ngFor="let form of forms; let i = index">
-      <ion-card (click)="redirectTo('competencias')">
+      <ion-card>
         <ion-card-header>
           <ion-card-subtitle>Form 100{{i+1}}</ion-card-subtitle>
           <ion-card-title>História da Minha Vida</ion-card-title>
         </ion-card-header>
-        <ion-card-content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel nisi
-          hendrerit, vulputate eros ac, hendrerit nisl. Proin vestibulum ligula
-          a nulla porta porta. Etiam egestas accumsan mi.
-          dolor mollis posuere.
-        </ion-card-content>
+        <ion-button class="access-form status-{{i}}" [disabled]="i == 2 || i == 5" (click)="i == 2 || i == 5 ? '' : redirectTo('competencias')">{{i == 2 || i == 5 ? 'Avaliação finalizada' : 'Acessar avaliação'}}<ion-icon name="chevron-forward-outline"></ion-icon></ion-button>
       </ion-card>
     </div>
   </ion-list>
