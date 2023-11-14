@@ -15,6 +15,10 @@ ion-card {
     width: 100%;
 }
 
+ion-card-title {
+    font-weight: 700;
+}
+
 ion-button.access-form {
     width: 95%;
     margin: 0 auto;
@@ -30,10 +34,11 @@ ion-button.access-form ion-icon {
 }
 
 ion-button[disabled] {
-    --background: var(--sesigray) !important;
-    --ion-color-base: var(--sesigray) !important;
-    color: #000;
+    --background: var(--sesigrey) !important;
+    --ion-color-base: var(--sesigrey) !important;
+    color: #fff;
     font-weight: 600 !important;
+    // opacity: 1;
 }
 
 ion-button.status-1 {

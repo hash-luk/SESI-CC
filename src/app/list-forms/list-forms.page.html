@@ -23,8 +23,8 @@
     <div class="item-container" *ngFor="let form of forms; let i = index">
       <ion-card>
         <ion-card-header>
-          <ion-card-subtitle>Form 100{{i+1}}</ion-card-subtitle>
-          <ion-card-title>História da Minha Vida</ion-card-title>
+          <ion-card-subtitle>Formulário {{i+1}}</ion-card-subtitle>
+          <ion-card-title>{{formsTitle[i]}}</ion-card-title>
         </ion-card-header>
         <ion-button class="access-form status-{{i}}" [disabled]="i == 2 || i == 5" (click)="i == 2 || i == 5 ? '' : redirectTo('competencias')">{{i == 2 || i == 5 ? 'Avaliação finalizada' : 'Acessar avaliação'}}<ion-icon name="chevron-forward-outline"></ion-icon></ion-button>
       </ion-card>

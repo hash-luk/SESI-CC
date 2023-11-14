@@ -7,19 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListFormsPage implements OnInit {
   forms: number[] = [];
-  formsTitle: string[] = [];
+  formsTitle: string[] = [
+    'HIstória da minha vida',
+    'Ocupação no tempo livre',
+    'Participação em atividades sociais',
+    'Principais atividades profissionais e aprendizagens',
+    'Linguagens, códigos e suas tecnologias',
+    'Matemática e suas tecnologias',
+    'Ciências da natureza e suas tecnologias',
+    'Ciências humanas e suas tecnologias'
+  ];
 
-  constructor() { 
-    for(let i = 1; i <= 8; i++) {
+  constructor() {
+    for (let i = 1; i <= 8; i++) {
       this.forms.push(i);
     }
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  redirectTo(page: string):void {
-    window.location.href = `${page}`
+  redirectTo(page: string): void {
+    window.location.href = `${page}`;
   }
-
 }
