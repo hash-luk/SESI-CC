@@ -91,7 +91,7 @@ ion-note {
 }
 
 .secondary-button {
-    --background: var(--sesisec);
+    --background: var(--sesifbi);
 }
 //Botões Default
 
@@ -105,6 +105,13 @@ ion-card ion-card-title {
 ion-datetime,
 ion-datetime-button {
   --ion-color-base: var(--sesi) !important;
+}
+
+ion-datetime-button,
+ion-datetime-button::part(native) {
+  background-color: var(--sesidark2);
+  border-radius: 8px;
+  color: #fff;
 }
 
 ion-datetime.md::part(active) {
@@ -255,6 +262,7 @@ ion-toggle.toggle-checked::part(handle) {
   justify-content: flex-start;
   gap: 16px;
   border-radius: 8px;
+  width: 100%;
 }
 
 .experience-container-1 .section-title {
