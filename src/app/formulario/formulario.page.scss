@@ -93,6 +93,7 @@ ion-note {
 .secondary-button {
     --background: var(--sesifbi);
 }
+
 //Botões Default
 
 //Card
@@ -236,6 +237,10 @@ ion-toggle.toggle-checked::part(handle) {
 .question-container ion-label {
   color: var(--sesiescuro);
   font-weight: 600;
+}
+
+.question-container .multiple-choice-question ion-label {
+  color: var(--area5);
 }
 
 .question-container-list-options {
