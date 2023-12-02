@@ -25,8 +25,9 @@
         <ion-card-header>
           <ion-card-subtitle>Formulário {{i+1}}</ion-card-subtitle>
           <ion-card-title>{{formsTitle[i]}}</ion-card-title>
+          <ion-text *ngIf="[4,5,6,7].includes(i)">Prencha os formulários de 1 a 4 para continuar</ion-text>
         </ion-card-header>
-        <ion-button class="access-form status-{{i}}" [disabled]="i == 2 || i == 5" (click)="i == 2 || i == 5 ? '' : redirectTo('competencias')">{{i == 2 || i == 5 ? 'Avaliação finalizada' : 'Acessar avaliação'}}<ion-icon name="chevron-forward-outline"></ion-icon></ion-button>
+        <ion-button class="access-form status-{{i}}" [disabled]="[4,5,6,7].includes(i)" (click)="i == 2 || i == 5 ? '' : redirectTo('competencias')">{{i == 2 || i == 5 ? 'Avaliação finalizada' : 'Acessar avaliação'}}<ion-icon name="chevron-forward-outline"></ion-icon></ion-button>
       </ion-card>
     </div>
   </ion-list>
