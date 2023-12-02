@@ -241,3 +241,21 @@ ion-toggle.toggle-checked::part(handle) {
   font-weight: 600;
 }
 //Container da questão
+
+//preloader
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+}
+
+.loading .preloader {
+  width: 50%;
+}

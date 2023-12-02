@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular';
-import { OverlayEventDetail } from '@ionic/core/components';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +8,7 @@ import { OverlayEventDetail } from '@ionic/core/components';
 })
 export class HomePage {
   @ViewChild(IonModal) modal: IonModal;
+  public isLoading: boolean = false;
 
   constructor() {   
   }

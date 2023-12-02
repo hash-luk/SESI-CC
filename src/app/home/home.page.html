@@ -1,4 +1,4 @@
-<ion-header [translucent]="false">
+<ion-header [translucent]="false" [ngStyle]="{'display': isLoading ? 'none' : 'block'}">
   <ion-toolbar>
     <!-- Aqui entraria o nome do aluno -->
     <ion-title> SESI Ionic Custom Components</ion-title>
@@ -10,6 +10,9 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
+  <div class="loading" *ngIf="isLoading">
+    <img src="../../assets/images/preloader.gif" alt="Gif de pré-carregamento" class="preloader"/>
+  </div>
   <div id="container">
     <div class="styled-component">
       <ion-title>Custom card</ion-title>
