@@ -245,6 +245,10 @@ ion-datetime.md::part(active) {
   color: var(--sesiescuro);
 }
 
+ion-datetime::part(today) {
+  --ion-color-base: var(--sesi) !important;
+}
+
 ion-datetime.md::part(calendar-day):focus {
   box-shadow: none !important;
 }
