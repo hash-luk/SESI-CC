@@ -6,13 +6,6 @@ ion-content::part(background) {
     background-color: var(--sesi);
 }
 
-ion-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
 ion-img {
   width: 150px !important;
 }
@@ -46,34 +39,11 @@ ion-img {
   gap: 8px;
 }
 
-ion-input {
-  position: relative;
-  --background: transparent !important;
-  z-index: 1;
-  flex: 1;
-}
-
-ion-input.has-focus,
-ion-input {
-  --highlight-color: var(--sesiescuro);
-}
-
-.input-fill-solid.sc-ion-input-md-h {
-  --padding-start: 0;
-  --border-color: var(--sesiblack);
-}
-
 ion-button {
   --background: var(--sesi);
   color: #fff;
   font-weight: 600;
   width: 100%;
-}
-
-ion-nav-link {
-  font-size: 14px;
-  text-decoration: underline;
-  font-weight: 600;
 }
 
 ion-label {

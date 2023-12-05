@@ -24,3 +24,264 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+//Header
+
+ion-toolbar {
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --background: var(--sesi);
+  gap: 16px;
+  color: #fff;
+}
+
+.menu-buttons {
+  justify-content: space-between;
+  margin-top: 8px;
+  padding: 0 10px;
+}
+
+//Inputs
+
+ion-input,
+ion-textarea {
+  background-color: #fff;
+  width: 100%;
+  border: 2px solid #c0c0c0;
+  border-radius: 4px;
+  background-color: #fff;
+  --padding-start: 4px !important;
+}
+
+ion-textarea.has-focus,
+ion-input.has-focus {
+  --highlight-color: var(--sesi);
+  border: 2px solid var(--sesi) !important;
+}
+
+ion-input.login-input {
+  border: 0px solid transparent !important;
+  --background: transparent !important;
+}
+
+ion-toggle.toggle-checked::part(track),
+ion-toggle.toggle-checked::part(handle) {
+  background: var(--sesi);
+}
+
+ion-checkbox {
+  --checkbox-background-checked: var(--sesi);
+}
+
+ion-checkbox::part(container) {
+  outline: 2px solid var(--sesigray100);
+  border: none;
+  padding: 2px;
+}
+
+ion-radio::part(mark) {
+  background: var(--sesi);
+}
+
+ion-radio::part(container) {
+  border-color: var(--sesigray100);
+}
+
+//Buttons
+
+.button-default {
+  --background: #fff !important;
+  --color: var(--sesi) !important;
+}
+
+.upload-button {
+  --background: var(--sesi) !important;
+}
+
+.button-default::part(native) {
+  border-radius: 4px;
+}
+
+.upload-button ion-icon {
+  margin-left: 8px;
+}
+
+.primary-button,
+.secondary-button {
+  width: 100%;
+  border: 8px;
+  --color: #fff;
+}
+
+.primary-button {
+  --background: var(--sesi);
+}
+
+.secondary-button {
+  --background: var(--sesifbi);
+}
+
+.additional-button {
+  --background: var(--sesisecdark);
+}
+
+ion-button.access-form {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+ion-button.access-form ion-icon {
+  font-size: 20px;
+}
+
+ion-button.status-1 {
+  --background: var(--sesi) !important;
+}
+
+ion-button.status-3 {
+  --background: var(--sesisecmedio) !important;
+}
+
+ion-button.status-4 {
+  --background: var(--sesifbi) !important;
+}
+
+ion-button.status-6 {
+  --background: var(--sesifbw) !important;
+  color: #000;
+}
+
+ion-button.status-7 {
+  --background: var(--sesisecdark) !important;
+}
+
+ion-button.status-8 {
+  --background: var(--sesisec) !important;
+}
+
+//Competence Buttons CLasses
+
+.ct-1 {
+  --background: var(--area1);
+}
+
+.ct-2 {
+  --background: var(--area2);
+}
+
+.ct-3 {
+  --background: var(--area3);
+}
+
+.ct-4 {
+  --background: var(--area4);
+}
+
+.ct-5 {
+  --background: var(--area5);
+}
+
+//Card
+
+ion-card ion-card-title {
+  color: var(--sesiescuro);
+  font-weight: 700;
+}
+
+ion-card {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  width: 100%;
+}
+
+//Texts and Required question
+
+ion-note {
+  padding: 0 20px;
+  color: #fff;
+}
+
+ion-label.question-label {
+  color: var(--sesi);
+  font-weight: 600;
+}
+
+.required-question {
+  color: var(--area4);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+//Calendar
+ion-datetime,
+ion-datetime-button {
+  --ion-color-base: var(--sesi) !important;
+}
+
+ion-datetime {
+  --ion-color-base: var(--sesi) !important;
+}
+
+ion-datetime-button,
+ion-datetime-button::part(native) {
+  background-color: var(--sesidark2);
+  border-radius: 8px;
+  color: #fff;
+}
+
+ion-datetime.md::part(active) {
+  --ion-color-base: var(--area5) !important;
+  background-color: transparent;
+  color: var(--sesiescuro);
+}
+
+ion-datetime.md::part(calendar-day):focus {
+  box-shadow: none !important;
+}
+
+//Radion Container
+
+.ion-radio-wrapper-general {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+//preloader
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+}
+
+.loading .preloader {
+  width: 50%;
+}
+
+//Multiple-choice-question container
+.multiple-choice-question {
+  width: 100%;
+}
+
+.multiple-choice-question ion-item ion-radio {
+  margin-right: 4px;
+}

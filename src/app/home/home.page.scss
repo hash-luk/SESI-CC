@@ -1,7 +1,3 @@
-* {
-  font-family: "Inter", sans-serif;
-}
-
 //Container Geral
 #container {
   display: flex;
@@ -14,13 +10,7 @@
 }
 
 #container ion-list {
-  display: flex;
-  flex-direction: column;
   gap: 16px;
-}
-
-#container ion-list.item-separator-display {
-  padding: 0 20px;
 }
 
 .styled-component {
@@ -33,229 +23,13 @@
   padding-bottom: 16px;
   border-bottom: 1px solid var(--sesigray200);
 }
-
-.ion-radio-wrapper-general {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 0 20px;
-  width: 100%;
-}
 //Container Geral
 
-//Header
-ion-header {
-  background-color: var(--sesi);
-}
-
-ion-toolbar {
-  --padding-top: 20px;
-  --padding-bottom: 20px;
-  --background: var(--sesi);
-  gap: 16px;
-  color: #fff;
-}
-//Header
-
-//Buttons Container
-.menu-buttons {
-  justify-content: space-between;
-  margin-top: 8px;
-  padding: 0 10px;
-}
-
-.menu-buttons .menu-icon{
-  color: #fff;
-}
-//Buttons Container
-
 //Botões Default
-.button-default {
-  --background: #fff;
-  --color: var(--sesi);
-}
-
-.upload-button {
-  --background: var(--sesi) !important;
-}
-
-.button-default::part(native) {
-  border-radius: 4px;
-}
-
-.upload-button ion-icon {
-  margin-left: 8px;
-}
-
 .primary-button,
 .secondary-button {
     width: 90%;
-    border: 8px;
-    --color: #fff;
     margin: 0 auto;
-}
-
-.primary-button {
-    --background: var(--sesi); 
-}
-
-.secondary-button {
-    --background: var(--sesisec);
-}
-
-.additional-button {
-  --background: var(--sesisecdark);
 }
 //Botões Default
 
-
-//Card
-ion-card ion-card-title {
-  color: var(--sesiescuro);
-}
-//Card
-
-//Calendário
-ion-datetime {
-  --ion-color-base: var(--sesi) !important;
-}
-
-ion-datetime.md::part(active) {
-  --ion-color-base: var(--area5) !important; 
-  background-color: transparent;
-  color: var(--sesiescuro);
-}
-
-ion-datetime.md::part(calendar-day):focus {
-  box-shadow: none !important;
-}
-//Calendário
-
-//Seletores Radio
-ion-radio::part(mark) {
-  background: var(--sesi);
-}
-
-ion-radio::part(container) {
-  border-color: var(--sesigray100) ;
-}
-//Seletores Radio
-
-//Seletor Checkbox
-ion-checkbox {
-  --checkbox-background-checked: var(--sesi);
-}
-
-ion-checkbox::part(container) {
-  outline: 2px solid var(--sesigray100);
-  border: none;
-  padding: 2px;
-}
-//Seletor Checkbox
-
-//Text-area
-ion-textarea {
-  width: 100%;
-  border: 2px solid #C0C0C0;
-  border-radius: 4px;
-  padding-left: 4px;
-}
-
-ion-textarea:focus {
-  border: 2px solid var(--sesi)
-}
-
-ion-textarea.has-focus.sc-ion-textarea-md-h .textarea-highlight.sc-ion-textarea-md {
-  transform: scale(0) !important;
-  display: none !important;
-}
-
-ion-textarea.has-focus.textarea-highlight {
-  display: none !important;
-}
-
-ion-textarea.has-focus.sc-ion-textarea-md-h .textarea-highlight.sc-ion-textarea-md {
-  transform: scale(0) !important;
-}
-
-ion-textarea.has-focus {
-  --highlight-color: var(--sesi);
-  border: 2px solid var(--sesi) !important;
-}
-//Text-area
-
-//Resposta curta
-ion-input {
-  border: 2px solid #C0C0C0;
-  border-radius: 4px;
-  padding-left: 4px !important;
-}
-
-ion-input.has-focus {
-  --highlight-color: var(--sesi);
-  border: 2px solid var(--sesi)
-}
-//Resposta curta
-
-//Custom Label
-ion-label.question-label {
-  color: var(--sesi);
-  font-weight: 600;
-}
-//Custom Label
-
-//Toogle Custom
-ion-toggle.toggle-checked::part(track),
-ion-toggle.toggle-checked::part(handle) {
-  background: var(--sesi);
-}
-//Toogle Custom
-
-//Multiple-choice-question
-.multiple-choice-question {
-  width: 100%;
-}
-
-.multiple-choice-question ion-item ion-radio {
-  margin-right: 4px;
-}
-//Multiple-choice-question
-
-//Container da questão
-.question-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 8px;
-  padding: 12px;
-  border-bottom: 1px solid var(--sesigray100)
-}
-
-.question-container:nth-child(even) {
-  background-color: var(--sesigray300);
-}
-
-.question-container ion-label {
-  color: var(--sesiescuro);
-  font-weight: 600;
-}
-//Container da questão
-
-//preloader
-.loading {
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100000;
-}
-
-.loading .preloader {
-  width: 50%;
-}
