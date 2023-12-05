@@ -49,6 +49,8 @@ ion-img {
 ion-input {
   position: relative;
   --background: transparent !important;
+  z-index: 1;
+  flex: 1;
 }
 
 ion-input.has-focus,
@@ -59,16 +61,6 @@ ion-input {
 .input-fill-solid.sc-ion-input-md-h {
   --padding-start: 0;
   --border-color: var(--sesiblack);
-}
-
-ion-input ion-icon {
-  position: absolute;
-  right: 0;
-  z-index: 2;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  color: var(--sesiescuro);
 }
 
 ion-button {
@@ -86,4 +78,23 @@ ion-nav-link {
 
 ion-label {
   font-weight: 600;
+}
+
+.input-host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.input-host a {
+  position: absolute;
+  z-index: 5;
+  right: 10px;
+  font-size: 24px;
+}
+
+.input-host a ion-icon {
+  color: var(--sesiescuro);
 }

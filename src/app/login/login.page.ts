@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonInput } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -6,14 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  @ViewChild('passwordField') passwordField: IonInput;
+  showPassword:boolean = false;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  redirectTo(page: string): void {
+    window.location.href = `${page}`;
   }
 
-  redirectTo(page: string):void {
-    window.location.href = `${page}`
+  public changePassView() {
+    this.showPassword = !this.showPassword;
+    this.passwordField.type = this.showPassword ? 'text' : 'password';
   }
-
 }

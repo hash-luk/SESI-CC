@@ -1,13 +1,37 @@
 <ion-content [fullscreen]="true">
-    <form class="form-content">
-      <ion-img src="../../assets/images/logo.svg" alt="Logo imagem SESI"/>
-      <ion-label>RDS - Reconhecimento de Saberes</ion-label>
-      <div class="input-wrapper">
-        <ion-input label="Usuário" label-placement="floating" fill="solid" placeholder="Digite seu email" required></ion-input>
-        <ion-input label="Senha" label-placement="floating" fill="solid" placeholder="Digite sua senha" required><ion-icon name="eye-outline"></ion-icon></ion-input>
+  <form class="form-content">
+    <ion-img src="../../assets/images/logo.svg" alt="Logo imagem SESI" />
+    <ion-label>RDS - Reconhecimento de Saberes</ion-label>
+    <div class="input-wrapper">
+      <ion-input
+        #userField
+        label="Usuário"
+        label-placement="floating"
+        fill="solid"
+        placeholder="Digite seu email"
+        id="user-field"
+        required
+      ></ion-input>
+      <div class="input-host">
+        <ion-input
+          #passwordField
+          label="Senha"
+          label-placement="floating"
+          fill="solid"
+          placeholder="Digite sua senha"
+          type="password"
+          required
+          ></ion-input>
+          <a
+            ><ion-icon
+              name="eye-outline"
+              (click)="changePassView()"
+            ></ion-icon></a
+        >
       </div>
-      <div class="control-buttons">
-        <ion-button type="submit" (click)="redirectTo('/')">Acessar</ion-button>
-      </div>
-    </form>
+    </div>
+    <div class="control-buttons">
+      <ion-button type="submit" (click)="redirectTo('/')">Acessar</ion-button>
+    </div>
+  </form>
 </ion-content>
