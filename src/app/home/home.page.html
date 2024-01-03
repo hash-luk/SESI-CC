@@ -1,7 +1,7 @@
 <ion-header [translucent]="false" [ngStyle]="{'display': isLoading ? 'none' : 'block'}">
   <ion-toolbar>
     <!-- Aqui entraria o nome do aluno -->
-    <ion-title> SESI Ionic Custom Components</ion-title>
+    <ion-title style="color: #fff;"> SESI Ionic Custom Components</ion-title>
     <ion-buttons class="menu-buttons">
       <ion-button [routerLink] = "['/']"><ion-icon name="home-outline" size="large" class="menu-icon"></ion-icon></ion-button>
       <ion-button fill="solid" class="button-default" expand="block" id="open-modal">Seções</ion-button>
@@ -9,104 +9,140 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true">
+<ion-content >
   <div class="loading" *ngIf="isLoading">
     <img src="../../assets/images/preloader.gif" alt="Gif de pré-carregamento" class="preloader"/>
   </div>
-  <div id="container">
-    <div class="styled-component">
-      <ion-title>Custom card</ion-title>
-      <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>Form 1008</ion-card-subtitle>
-          <ion-card-title>História da Minha Vida</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel nisi
-          hendrerit, vulputate eros ac, hendrerit nisl. Proin vestibulum ligula
-          a nulla porta porta. Etiam egestas accumsan mi.
-          dolor mollis posuere.
-        </ion-card-content>
-      </ion-card>
-    </div>
-    <div class="styled-component">
-      <ion-title>Custom form label</ion-title>
-      <div class="ion-radio-wrapper-general">
-        <ion-label class="question-label">Para mim, reconhecimento de saberes é...:</ion-label>
+  <div class="content-wrapper">
+    <ion-card class="support-card">
+      <ion-title class="support-card__title">RDS - Reconhecimento de Saberes</ion-title>
+      <ion-text class="support-card__highlighted-text">
+        Suas competências não formais, informais e formais valorizadas. Conhecimentos, aspirações e interesses de vida são considerados em nossas avaliações.
+      </ion-text>
+      <ion-text>
+        Participe ao responder nossos formulários e entrevistas para análise e aproveitamento de todas as suas experiências.
+      </ion-text>
+    </ion-card>
+    <ion-card class="support-card">
+      <ion-title class="support-card__title">
+        Formulário de vida
+      </ion-title>
+      <ion-text>
+        Ao responder os formulários abaixo, relembre o passado, reflita e conte para nós um pouco da sua história de vida.
+      </ion-text>
+      <div class="wrapper-forms">
+        <div class="form-card-wrapper">
+          <div class="form-card-wrapper__form-number">
+            <ion-text>
+              1
+            </ion-text>
+          </div>
+          <ion-text class="form-card-wrapper__form-title">História da minha vida</ion-text>
+          <div class="form-card-wrapper__form-arrow">
+            <ion-icon name="caret-forward-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="form-card-wrapper">
+          <div class="form-card-wrapper__form-number">
+            <ion-text>
+              2
+            </ion-text>
+          </div>
+          <ion-text class="form-card-wrapper__form-title">Ocupações no tempo livre</ion-text>
+          <div class="form-card-wrapper__form-arrow">
+            <ion-icon name="caret-forward-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="form-card-wrapper">
+          <div class="form-card-wrapper__form-number">
+            <ion-text>
+              3
+            </ion-text>
+          </div>
+          <ion-text class="form-card-wrapper__form-title">Participação em atividades sociais</ion-text>
+          <div class="form-card-wrapper__form-arrow">
+            <ion-icon name="caret-forward-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="form-card-wrapper">
+          <div class="form-card-wrapper__form-number">
+            <ion-text>
+              4
+            </ion-text>
+          </div>
+          <ion-text class="form-card-wrapper__form-title">Principais atividades profissionais e aprendizagens</ion-text>
+          <div class="form-card-wrapper__form-arrow">
+            <ion-icon name="caret-forward-outline"></ion-icon>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="styled-component" >
-      <ion-title>Custom calendar Input</ion-title>
-      <ion-datetime-button datetime="start-datetime" style="margin-left: 20px;"></ion-datetime-button>
-    </div>
-    <div class="styled-component">
-      <ion-title>Custom radio</ion-title>
-      <ion-radio-group value="turtles" class="ion-radio-wrapper-general">
-        <ion-radio value="dogs">Identidade visual</ion-radio><br />
-        <ion-radio value="cats">Contrato de serviço</ion-radio><br />
-        <ion-radio value="turtles">Ambientalismo</ion-radio><br />
-        <ion-radio value="fish">Coffee break</ion-radio><br />
-      </ion-radio-group>
-    </div>
-    <div class="styled-component">
-      <ion-title>Custom checkbox</ion-title>
-      <div class="ion-radio-wrapper-general">
-        <ion-checkbox>Desportivo</ion-checkbox>
-        <ion-checkbox>Cultural</ion-checkbox>
-        <ion-checkbox>Religioso</ion-checkbox>
-        <ion-checkbox>Filantropico</ion-checkbox>
+    </ion-card>
+    <ion-card class="support-card">
+      <ion-title class="support-card__title">
+        Competências e Avaliações
+      </ion-title>
+      <ion-text>
+        Ao responder os formulários abaixo, compartilhe conosco suas competências e experiências pessoais e profissionais atualmente. Agora é o momento de avaliarmos suas habilidades em diversas áreas do conhecimento! Acesse os formulários abaixo e responda às questões de múltipla escolha.
+      </ion-text>
+      <div class="wrapper-forms">
+        <div class="form-aval-card-wrapper languages">
+          <div class="form-aval-card-wrapper__header">
+            <div class="form-aval-card-wrapper__header__form-number">
+              <ion-text>
+                5
+              </ion-text>
+              <div class="form-aval-card-wrapper__header__form-number__status"></div>
+            </div>
+            <ion-text class="form-aval-card-wrapper__header__form-title">Linguagens, códigos e suas tecnologias</ion-text>
+          </div>
+          <div class="form-aval-card-wrapper__body languages-body">
+            <ion-button disabled>Formulário</ion-button>
+          </div>
+        </div>
+        <div class="form-aval-card-wrapper math">
+          <div class="form-aval-card-wrapper__header">
+            <div class="form-aval-card-wrapper__header__form-number">
+              <ion-text>
+                6
+              </ion-text>
+              <div class="form-aval-card-wrapper__header__form-number__status"></div>
+            </div>
+            <ion-text class="form-aval-card-wrapper__header__form-title">Matemática e suas tecnologias</ion-text>
+          </div>
+          <div class="form-aval-card-wrapper__body languages-body">
+            <ion-button disabled>Formulário</ion-button>
+          </div>
+        </div>
+        <div class="form-aval-card-wrapper natural-sciences">
+          <div class="form-aval-card-wrapper__header">
+            <div class="form-aval-card-wrapper__header__form-number">
+              <ion-text>
+                7
+              </ion-text>
+              <div class="form-aval-card-wrapper__header__form-number__status"></div>
+            </div>
+            <ion-text class="form-aval-card-wrapper__header__form-title">Ciências da natureza e suas tecnologias</ion-text>
+          </div>
+          <div class="form-aval-card-wrapper__body languages-body">
+            <ion-button disabled>Formulário</ion-button>
+          </div>
+        </div>
+        <div class="form-aval-card-wrapper human-sciences">
+          <div class="form-aval-card-wrapper__header">
+            <div class="form-aval-card-wrapper__header__form-number">
+              <ion-text>
+                8
+              </ion-text>
+              <div class="form-aval-card-wrapper__header__form-number__status"></div>
+            </div>
+            <ion-text class="form-aval-card-wrapper__header__form-title">Ciências humanas e suas tecnologias</ion-text>
+          </div>
+          <div class="form-aval-card-wrapper__body languages-body">
+            <ion-button disabled>Formulário</ion-button>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="styled-component">
-      <ion-title>Custom short text response</ion-title>
-      <div class="ion-radio-wrapper-general">
-        <ion-input placeholder="Digite sua resposta"></ion-input>
-      </div>
-    </div>
-    <div class="styled-component">
-      <ion-title>Custom long text response</ion-title>
-      <div class="ion-radio-wrapper-general">
-        <ion-textarea placeholder="Digite sua resposta" rows="2" autoGrow="true"></ion-textarea>
-      </div>
-    </div>
-    <div class="styled-component">
-      <ion-title>Custom input toogle</ion-title>
-      <div class="ion-radio-wrapper-general">
-        <ion-toggle [enableOnOffLabels]="true">Tem experiência profissional?</ion-toggle>
-      </div>
-    </div>
-    <div class="styled-component">
-      <ion-title>Custom multiple-choice</ion-title>
-      <ion-radio-group value="question" class="multiple-choice-question">
-        <ion-item>
-          <ion-radio value="a"></ion-radio><ion-label><strong>A)</strong> Identidade visual.</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-radio value="b"></ion-radio><ion-label><strong>B)</strong> Contrato de serviço..</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-radio value="c"></ion-radio><ion-label><strong>C)</strong> Ambientalismo.</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-radio value="d"></ion-radio><ion-label><strong>D)</strong> Coffee break.</ion-label>
-        </ion-item>
-      </ion-radio-group>
-    </div>
-    <div class="styled-component">
-      <ion-title>Custom input file</ion-title>
-      <div class="ion-radio-wrapper-general">
-        <input type="file" id="file-upload" onChange={setImage} style="display: none;"/>
-        <ion-button class="upload-button">
-          <span>Enviar arquivo</span>
-          <ion-icon name="cloud-upload-outline" size="medium"></ion-icon>
-        </ion-button>
-      </div>
-    </div>
-    <div class="styled-component">
-      <ion-title>Custom submit buttons</ion-title>
-      <ion-button class="primary-button">Salvar Parcial</ion-button>
-      <ion-button class="secondary-button">Finalizar</ion-button>
-    </div>
+    </ion-card>
   </div>
   <ion-modal trigger="open-modal">
     <ng-template>
@@ -124,13 +160,9 @@
           <ion-button class="primary-button" (click)="redirectTo('competencias')">Exemplo Competências</ion-button>
           <ion-button class="secondary-button" (click)="redirectTo('formulario')">Exemplo de formulário</ion-button>
           <ion-button class="secondary-button additional-button" (click)="redirectTo('list-forms')">Exemplo Indíce de formulários</ion-button>
+          <ion-button class="primary-button" (click)="redirectTo('old-content')">Conteúdo antigo da home</ion-button>
         </ion-list>
       </ion-content>
-    </ng-template>
-  </ion-modal>
-  <ion-modal [keepContentsMounted]="true">
-    <ng-template>
-      <ion-datetime id="start-datetime" presentation="date"></ion-datetime>
     </ng-template>
   </ion-modal>
 </ion-content>

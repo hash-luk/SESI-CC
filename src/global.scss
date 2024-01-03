@@ -122,7 +122,7 @@ ion-radio::part(container) {
 }
 
 .secondary-button {
-  --background: var(--sesi);
+  --background: #EA7520;
 }
 
 .additional-button {
@@ -265,4 +265,12 @@ ion-datetime.md::part(calendar-day):focus {
 
 .multiple-choice-question ion-item ion-radio {
   margin-right: 4px;
+}
+
+//Conteúdo adicionado necessário
+
+ion-title {
+  color: var(--sesiescuro);
+  font-weight: 700;
+  font-size: 20px;
 }

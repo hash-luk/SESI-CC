@@ -1,35 +1,201 @@
-//Container Geral
-#container {
+//Divs de agrupamento
+.content-wrapper {
+  width: 100vw;
+  max-width: 95%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 30px;
-  max-width: 414px;
-  margin: 100px auto;
-}
-
-#container ion-list {
+  align-items: center;
+  margin: 0 auto;
+  padding: 16px 0;
   gap: 16px;
 }
 
-.styled-component {
+.wrapper-forms {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 16px;
+  align-items: center;
+  gap: 20px;
+}
+
+
+//Cards
+.support-card {
+  padding: 12px 8px;
+  margin: 0;
+  max-width: 96%;
+  gap: 8px;
+}
+
+.support-card__title {
+  padding-left: 0;
+}
+
+.support-card__highlighted-text {
+  font-weight: 600;
+  color: #000;
+}
+
+.form-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  overflow: hidden;
   width: 100%;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--sesigray200);
+  max-width: 95%;
+  height: 68px;
+  box-shadow: 2px 0px 4px 0px rgba(51,0,0,0.23);
+  background-color: #EFEFEF;
+  padding-left: 8px;
 }
-//Container Geral
 
-//Botões Default
-.primary-button,
-.secondary-button {
-    width: 90%;
-    margin: 0 auto;
+.form-card-wrapper__form-number {
+  border-radius: 100%;
+  background-color: var(--sesi);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
-//Botões Default
+
+.form-card-wrapper__form-title {
+  color: #000;
+  font-weight: 500;
+  text-align: left;
+  width: 70%;
+  max-width: 70%;
+}
+
+.form-card-wrapper__form-arrow {
+  color: #fff;
+  background-color: var(--sesi);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+}
+
+.form-aval-card-wrapper {
+  width: 100%;
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.form-aval-card-wrapper__header__form-title {
+  max-width: 70%;
+  width: 70%;
+  color: #fff;
+  font-weight: 600;
+}
+
+.form-aval-card-wrapper__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 92px;
+}
+
+.form-aval-card-wrapper__header__form-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 100%;
+}
+
+.form-aval-card-wrapper__header__form-number ion-text {
+  font-weight: 600;
+}
+
+.form-aval-card-wrapper__header__form-number__status {
+  position: absolute;
+  border-radius: 100%;
+  border: 2px solid var(--sesi);
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.form-aval-card-wrapper__body {
+  width: 100%;
+  height: 144px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-aval-card-wrapper ion-button {
+  color: #fff;
+}
+
+//Cores Formulários 1005 a 1008
+.languages .form-aval-card-wrapper__header,
+.languages ion-button {
+  background-color: #9E6D00;
+  --background:#9E6D00; 
+}
+
+.languages .form-aval-card-wrapper__header__form-number ion-text {
+  color: #9E6D00;
+}
+
+.languages .form-aval-card-wrapper__body {
+  background-color: #E5B64B;
+}
+
+.math .form-aval-card-wrapper__header,
+.math ion-button {
+  background-color: #1C7E80;
+  --background:#1C7E80;
+}
+
+.math .form-aval-card-wrapper__header__form-number ion-text {
+  color: #1C7E80;
+}
+
+.math .form-aval-card-wrapper__body {
+  background-color: #65BABB;
+}
+
+.natural-sciences .form-aval-card-wrapper__header,
+.natural-sciences ion-button {
+  background-color: #2C5A69;
+  --background:#2C5A69;
+}
+
+.natural-sciences .form-aval-card-wrapper__header__form-number ion-text {
+  color: #2C5A69;
+}
+
+.natural-sciences .form-aval-card-wrapper__body {
+  background-color: #357388;
+}
+
+.human-sciences .form-aval-card-wrapper__header,
+.human-sciences ion-button {
+  background-color: #982317;
+  --background:#982317;
+}
+
+.human-sciences .form-aval-card-wrapper__header__form-number ion-text {
+  color: #982317;
+}
+
+.human-sciences .form-aval-card-wrapper__body {
+  background-color: #BE4A3D;
+}
 

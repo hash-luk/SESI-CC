@@ -1,6 +1,5 @@
 ion-content::part(background) { 
-  background: url('../../assets/images/login-bg.svg');
-    -webkit-background-size: cover;
+      -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-color: var(--sesi);
@@ -18,7 +17,7 @@ ion-img {
   -webkit-box-shadow: 2px 2px 5px 4px rgba(0,0,0,0.17);
   -moz-box-shadow: 2px 2px 5px 4px rgba(0,0,0,0.17);
   box-shadow: 2px 2px 5px 4px rgba(0,0,0,0.17);
-  gap: 48px;
+  gap: 24px;
   margin-top: 50%;
   align-items: center !important;
   border-radius: 8px;
