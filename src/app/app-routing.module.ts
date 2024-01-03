@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'old-content',
     loadChildren: () => import('./old-content/old-content.module').then( m => m.OldContentPageModule)
   },
+  {
+    path: 'info-boxes',
+    loadChildren: () => import('./info-boxes/info-boxes.module').then( m => m.InfoBoxesPageModule)
+  },
 ];
 
 @NgModule({

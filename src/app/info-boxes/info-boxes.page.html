@@ -1,0 +1,125 @@
+<ion-header [translucent]="false" [ngStyle]="{'display': isLoading ? 'none' : 'block'}">
+  <ion-toolbar>
+    <!-- Aqui entraria o nome do aluno -->
+    <ion-title> SESI Ionic Custom Components</ion-title>
+    <ion-buttons class="menu-buttons">
+      <ion-button [routerLink] = "['/']"><ion-icon name="home-outline" size="large" class="menu-icon"></ion-icon></ion-button>
+      <ion-button fill="solid" class="button-default" expand="block" id="open-modal">Seções</ion-button>
+      <ion-button><ion-icon name="exit-outline" size="large" class="menu-icon"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="content-wrapper">
+    <ion-title>
+      Informações Form 1001
+    </ion-title>
+    <div class="info-box-wrapper">
+      <div class="info-box-wrapper__left-side">
+        <div class="info-box-wrapper__left-side__content">
+          <img src="../../assets/icon/32px/ontem-icon.svg" alt="Ícone de representação de ontem">
+          <ion-text class="info-box-wrapper__left-side__content__title">Ontem</ion-text>
+        </div>
+      </div>
+      <div class="info-box-wrapper__right-side">
+          <ion-text class="info-box-wrapper__right-side__message">
+            Quando você pensa em um momento passado, fale sobre suas origens, como sua vida familiar, e relembre suas alegrias e dificuldades no período da infância e da adolescência.
+          </ion-text>
+      </div>
+    </div>
+    <div class="info-box-wrapper">
+      <div class="info-box-wrapper__left-side">
+        <div class="info-box-wrapper__left-side__content">
+          <img src="../../assets/icon/32px/hoje-icon.svg" alt="Ícone de representação de ontem">
+          <ion-text class="info-box-wrapper__left-side__content__title">Hoje</ion-text>
+        </div>
+      </div>
+      <div class="info-box-wrapper__right-side">
+          <ion-text class="info-box-wrapper__right-side__message">
+            Quando você pensa no momento presente, fale como se enxerga atualmente e sua visão de vida. Deixe suas dúvidas e angústias enquanto relembra as lições aprendidas ao longo da vida.
+          </ion-text>
+      </div>
+    </div>
+    <div class="info-box-wrapper">
+      <div class="info-box-wrapper__left-side">
+        <div class="info-box-wrapper__left-side__content">
+          <img src="../../assets/icon/32px/amanha-icon.svg" alt="Ícone de representação de ontem">
+          <ion-text class="info-box-wrapper__left-side__content__title">Hoje</ion-text>
+        </div>
+      </div>
+      <div class="info-box-wrapper__right-side">
+          <ion-text class="info-box-wrapper__right-side__message">
+            Quando você pensa no futuro, fale sobre seus planos de vida, seus sonhos e coisas que ainda pretende realizar ou conquistar. Comente suas ideias e projetos futuros.
+          </ion-text>
+      </div>
+    </div>
+    <div class="info-box-wrapper">
+      <div class="info-box-wrapper__left-side">
+        <div class="info-box-wrapper__left-side__content">
+          <img src="../../assets/icon/32px/information-icon-rds.svg" alt="Ícone de representação de ontem">
+          <ion-text class="info-box-wrapper__left-side__content__title">Hoje</ion-text>
+        </div>
+      </div>
+      <div class="info-box-wrapper__right-side">
+          <ion-text class="info-box-wrapper__right-side__message">
+            Preencha todos os campos do formulário com as informações solicitadas, após o preenchimento clique em FINALIZAR. Uma vez que o cadastro for finalizado não será possível realizar novas alterações.
+          </ion-text>
+      </div>
+    </div>
+    <ion-title>
+      Informações Form 1002 a 1004
+    </ion-title>
+    <div class="info-box-wrapper">
+      <div class="info-box-wrapper__left-side">
+        <div class="info-box-wrapper__left-side__content">
+          <img src="../../assets/icon/32px/information-icon-rds.svg" alt="Ícone de representação de ontem">
+          <ion-text class="info-box-wrapper__left-side__content__title">Info</ion-text>
+        </div>
+      </div>
+      <div class="info-box-wrapper__right-side">
+          <ion-text class="info-box-wrapper__right-side__message">
+            Preencha todos os campos do formulário com as informações solicitadas, após o preenchimento clique em FINALIZAR. Uma vez que o cadastro for finalizado não será possível realizar novas alterações.
+          </ion-text>
+      </div>
+    </div>
+    <ion-title>
+      Informações Form 1005 a 1006
+    </ion-title>
+    <div class="info-box-wrapper">
+      <div class="info-box-wrapper__left-side">
+        <div class="info-box-wrapper__left-side__content">
+          <img src="../../assets/icon/32px/information-icon-rds.svg" alt="Ícone de representação de ontem">
+          <ion-text class="info-box-wrapper__left-side__content__title">Preenchimento</ion-text>
+        </div>
+      </div>
+      <div class="info-box-wrapper__right-side">
+          <ion-text class="info-box-wrapper__right-side__message">
+            Marque a resposta adequada à competência referida (totalmente, parciamente ou pouco) e, logo abaixo, registre em qual situação você aplicou a competência, as dificuldades ao realizar a ação
+            e o que você precisa aprender em relação a competência mencionada.
+          </ion-text>
+      </div>
+    </div>
+  </div>
+  <ion-modal trigger="open-modal">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="end">
+            <ion-button (click)="cancel()">Voltar</ion-button>
+          </ion-buttons>
+          <ion-title>Selecione uma seção</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-list class="styled-component">
+          <ion-button class="primary-button additional-button" (click)="redirectTo('login')">Exemplo Login</ion-button>
+          <ion-button class="primary-button" (click)="redirectTo('competencias')">Exemplo Competências</ion-button>
+          <ion-button class="secondary-button" (click)="redirectTo('formulario')">Exemplo de formulário</ion-button>
+          <ion-button class="secondary-button additional-button" (click)="redirectTo('list-forms')">Exemplo Indíce de formulários</ion-button>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
