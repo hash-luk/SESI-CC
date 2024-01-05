@@ -1,29 +1,61 @@
-//Container de competencias
-div.item-container {
+.content-wrapper {
+  width: 100vw;
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 16px 0;
+  gap: 16px;
+}
+
+.wrapper-forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+
+.competece-form-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 80%;
+  height: 68px;
+  box-shadow: 2px 0px 4px 0px rgba(51,0,0,0.23);
+  background-color: #EFEFEF;
+  padding-left: 8px;
+}
+
+.competece-form-card-wrapper__competece-title {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
+  color: #000;
+  font-weight: 600;
 }
 
-div.item-container:not(:last-child) {
-  border-bottom: 1px solid var(--sesigray100);
-}
-//Container de competencias
-
-//Botões de competencia
-.competence-button {
-  width: 100%;
-  --background: var(--sesiescuro);
+.competece-form-card-wrapper__form-title {
+  color: #000;
+  font-weight: 500;
+  text-align: left;
+  width: 70%;
+  max-width: 70%;
 }
 
-.competence-button span {
-  font-size: 18px;
-  margin-right: 16px;
-}
-
-.competence-button::part(native) {
-  padding: 12px;
-  font-size: 16px;
+.competece-form-card-wrapper__form-arrow {
+  color: #fff;
+  background-color: var(--sesi);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
 }
